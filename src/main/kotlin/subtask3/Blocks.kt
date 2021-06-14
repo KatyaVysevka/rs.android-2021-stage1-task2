@@ -9,22 +9,22 @@ class Blocks {
 
     // TODO: Complete the following function
     fun getData(blockA: Array<*>, blockB: KClass<*>): Any {
-        throw NotImplementedError("Not implemented")
-//        when (blockB) {
-//            Int::class -> {
-//                var answer = 0
-//                for (i in blockA) {
-//                    if (i is Int) answer += i
-//                }
-//                return answer
-//            }
-//            String::class -> {
-//                var answer = ""
-//                for (i in blockA) {
-//                    if (i is String) answer += i
-//                }
-//                return answer
-//            }
+        //throw NotImplementedError("Not implemented")
+        when (blockB) {
+            Int::class -> {
+                var answer = 0
+                for (i in blockA) {
+                    if (i is Int) answer += i
+                }
+                return answer
+            }
+            String::class -> {
+                var answer = ""
+                for (i in blockA) {
+                    if (i is String) answer += i
+                }
+                return answer
+            }
 //            LocalDate::class -> {
 //                val dateList = mutableListOf<LocalDate>()
 //                for (i in blockA) {
@@ -37,8 +37,8 @@ class Blocks {
 //                return answer.format(formatPattern)
 //
 //            }
-//        }
-//        return "Это костыль - не трогать"
+        }
+        return "Это костыль - не трогать"
     }
 
 }
