@@ -8,16 +8,15 @@ class DateFormatter {
 
     // TODO: Complete the following function
     fun toTextDay(day: String, month: String, year: String): String {
-       // throw NotImplementedError("Not implemented")
+        // throw NotImplementedError("Not implemented")
         return try {
-            val dateFormat = SimpleDateFormat ("d MMMM, EEEE", Locale ("ru"))
+            val dateFormat = SimpleDateFormat("d MMMM, EEEE", Locale("ru"))
             val calendar = Calendar.getInstance()
             calendar.isLenient = false
-            calendar.set(year.toInt(), month.toInt()-1 , day.toInt())
-            return dateFormat.format(calendar.time)
+            calendar.set(year.toInt(), month.toInt() - 1, day.toInt())
+            dateFormat.format(calendar.time)
 
-        }
-        catch (e: Exception) {
+        } catch (e: Exception) {
             "Такого дня не существует"
         }
 
