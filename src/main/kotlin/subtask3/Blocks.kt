@@ -11,13 +11,13 @@ class Blocks {
     fun getData(blockA: Array<*>, blockB: KClass<*>): Any {
         //throw NotImplementedError("Not implemented")
         when (blockB) {
-//            Int::class -> {
-//                var answer = 0
-//                for (i in blockA) {
-//                    if (i is Int) answer += i
-//                }
-//                return answer
-//            }
+            Int::class -> {
+                var answer = 0
+                for (i in blockA) {
+                    if (i is Int) answer += i
+                }
+                return answer
+            }
             String::class -> {
                 var answer = ""
                 for (i in blockA) {
